@@ -1,0 +1,69 @@
+/* SE FOR MEXER AQUI AJEITA O HERO_EFFECTS.JS TAMBÉM */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 0; 
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 3; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 2;
+}
+
+@media (max-width: 992px) {
+    .hero .container {
+        justify-content: center;
+    }
+    
+    .hero-content {
+        text-align: center;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        min-height: 90vh;
+    }
+    
+    .hero .container {
+        height: 90vh;
+    }
+}
+
+.hero-image.parallax {
+    transform: translateY(0);
+    transition: transform 0.3s ease-out;
+}

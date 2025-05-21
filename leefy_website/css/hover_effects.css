@@ -1,0 +1,30 @@
+/* TIVER QUE SEPARAR DO STYLE PORQUE TAVA CONFUNDINDO COM OUTROS HOVER, MEXER AQUI DEPOIS PRA JUNTAR NO STYLE */
+
+.servicos-grid .servico-card {
+    transition: all 0.3s ease !important;
+}
+
+.servicos-grid .servico-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.servicos-detalhados .servico-detalhe,
+.servicos-adicionais .servico-detalhe {
+    transition: all 0.3s ease !important;
+}
+
+.servicos-detalhados .servico-detalhe:hover,
+.servicos-adicionais .servico-detalhe:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.servico-card, .servico-detalhe {
+    position: relative;
+    z-index: 1;
+}
+
+.servico-card:hover, .servico-detalhe:hover {
+    z-index: 2;
+}
